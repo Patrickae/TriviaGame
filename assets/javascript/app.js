@@ -59,9 +59,10 @@ function countDown(){
 
 	//if timer gets below zero, default wrong answer and add one to unanswered
 	if( timer < 0){
-		postQuestion();	
+			
 		$(".result").text("Sorry, the right answer was " + questionOptions[currentQuestion].answer);
 		unanswered ++;
+		postQuestion();
 	};
 	
 
@@ -123,7 +124,7 @@ function postQuestion(){
 	//starts the next question in 3 seconds
 	setTimeout(startGame, 3000);
 	//reset timer
-	timer = 30;
+	timer = 5;
 
 
 }
