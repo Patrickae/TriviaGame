@@ -128,6 +128,8 @@ function postQuestion(){
 
 }
 
+
+$("#over").hide();
 //start game by clicking start
 $(".start").on("click", function(){
 	$(".start").hide();
