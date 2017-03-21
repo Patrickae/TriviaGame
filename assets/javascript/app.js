@@ -49,7 +49,6 @@ questionOptions[2] = question3;
 
 
 
-
 //this function displays the curent timer amount and then deletes one from timer. to be used in an interval.
 function countDown(){
 	//display timer value
@@ -127,7 +126,15 @@ function postQuestion(){
 	timer = 5;
 
 
-}
+};
+
+function reset(){
+
+	correctAnswers = 0;
+	incorrectAnswers = 0;
+	unanswered = 0;
+	currentQuestion = 0;
+};
 
 
 $("#over").hide();
@@ -164,14 +171,13 @@ $(".answer").on("click", function(){
 
 });
 
-if (currentQuestion === questionOptions.length){
 
-	$("#correct").text("Correct answers: " + correctAnswers);
-	$("#incorrect").text("Incorrect answers: " + incorrectAnswers);
-	$("#unanswered").text("Unanswered questions: " + unanswered);
-};
 
-//result if clock runs out
+$(".replay").on("click", function(){
+	reset();
+	startGame();
+});
+
 
 
 
