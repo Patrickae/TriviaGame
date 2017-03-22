@@ -1,50 +1,71 @@
 
 .answer:hover {background-color: yellow;
-				color: #F2C640;
-				background-color: #2E7866;}
+	color: #F2C640;
+	background-color: #2E7866;}
 
 
-body {background-image: url(../images/repeatingferns.jpg);}
+	body {background-image: url(../images/repeatingferns.jpg);
+			height: 100%;}
+
+@media screen and (max width: 480px);
+
+	.content { background-color: #3F485B; 
+		height: 700px;
+		text-align: center;
+		color:#ffffff;
+	}
+
+	hr { border: 1px solid #F2C640 }
+
+	h1 { text-align: center;
+		margin-top:40px;
+		font-family: 'Cinzel Decorative', cursive;
+		font-weight:900;
+		font-size: 40px;
+		color:#ffffff;
+		text-shadow: 2px 2px #000000;
+	}
 
 
-
-.content { background-color: #3F485B; 
-			height: 700px;
-			text-align: center;
-			color:#ffffff;
-			}
-
-hr { border: 1px solid #F2C640 }
-
-h1 { text-align: center;
-	margin-top:40px;
-	font-family: 'Cinzel Decorative', cursive;
-	font-weight:900;
-	font-size: 40px;
-	color:#ffffff;
-	text-shadow: 2px 2px #000000;
-	 }
-
-
-#clock{ font-size: 20px; 
+	#clock{ font-size: 20px; 
 		color: #ffffff;
 		font-family: 'Raleway', sans-serif;}
-#countdown{ color: #F2C640 ; }
+		#countdown{ color: #F2C640 ; }
 
-#question { font-size: 30px; 
+		#question { font-size: 30px; 
 			font-family: 'Cinzel Decorative', cursive;
 			font-weight:400;
 			text-shadow: 2px 2px #000000;
 			padding: 20px 10px;
-			}
+		}
 
-.answer{font-size: 30px;
-		font-family: 'Raleway', sans-serif;}
+		.answer{font-size: 30px;
+			font-family: 'Raleway', sans-serif;}
 
-.result{font-size: 20px;
-		font-family: 'Raleway', sans-serif;}
+			.result{font-size: 20px;
+				font-family: 'Raleway', sans-serif;}
 
-img{ height: 300px;
-	border: 2px solid #2E7866;
-	border-radius: 15px 50px }
+				img{ height: 300px;
+					border: 2px solid #2E7866;
+					border-radius: 15px 50px }
+
+@media screen and (max width: 480px){
+
+	.content{ height: 700px; }
+
+	h1 { text-align: center;
+		margin-top:40px;
+		font-family: 'Cinzel Decorative', cursive;
+		font-weight:900;
+		font-size: 100px;
+		color:#ffffff;
+		text-shadow: 2px 2px #000000;
+	}
+}
+
+
+
+
+
+
 
