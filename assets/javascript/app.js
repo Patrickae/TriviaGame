@@ -15,52 +15,52 @@ var currentQuestion = 0;
 
 //question objects. the question, the answerOptions, the correct answer( as the index of answerOptions), the picture to be displayed
 var question1 = { 
-	question:"Rock star, flier than an ostrich.", 
-	answerOptions:[ "Juelz Santana", "Red Man", "Freeway", "N.O.R.E."],
-	answer: "Juelz Santana",
-	answerIndex: 0,	
-	image: "assets/images/juelzsantana.jpg"	
+		question:"Rock star, flier than an ostrich.", 
+		answerOptions:[ "Juelz Santana", "Red Man", "Freeway", "N.O.R.E."],
+		answer: "Juelz Santana",
+		answerIndex: 0,	
+		image: "assets/images/juelzsantana.jpg"	
 
 };
 
 var question2 = { 
-	question:"We from two different cities, Minnesota and Philly", 
-	answerOptions:[ "Red Man", "2 Chainz", "Freeway", "Nicki Minaj"],
-	answer: "Freeway",
-	answerIndex: 2,
-	image: "assets/images/freeway.jpg" 
+		question:"We from two different cities, Minnesota and Philly", 
+		answerOptions:[ "Red Man", "2 Chainz", "Freeway", "Nicki Minaj"],
+		answer: "Freeway",
+		answerIndex: 2,
+		image: "assets/images/freeway.jpg" 
 };
 
 var question3 = { 
-	question:"Always been them horizontal lines through them 'S's/ That's a dollar sign.", 
-	answerOptions:[ "Juelz Santana", "Chamillionaire", "Jay-Z", "Kanye West"],
-	answer: "Chamillionaire",
-	answerIndex: 1,
-	image: "assets/images/chamillionaire.jpg"	
+		question:"Always been them horizontal lines through them 'S's/ That's a dollar sign.", 
+		answerOptions:[ "Juelz Santana", "Chamillionaire", "Jay-Z", "Kanye West"],
+		answer: "Chamillionaire",
+		answerIndex: 1,
+		image: "assets/images/chamillionaire.jpg"	
 };
 
 var question4 = { 
-	question:"My paragraph alone is worth five mics/ A twelve song LP, that's thirty-six mics", 
-	answerOptions:[ "N.O.R.E.", "Chamillionaire", "Red Man", "Kanye West"],
-	answer: "Red Man",
-	answerIndex: 2,
-	image: "assets/images/redman.jpg"
+		question:"My paragraph alone is worth five mics/ A twelve song LP, that's thirty-six mics", 
+		answerOptions:[ "N.O.R.E.", "Chamillionaire", "Red Man", "Kanye West"],
+		answer: "Red Man",
+		answerIndex: 2,
+		image: "assets/images/redman.jpg"
 };
 
 var question5 = { 
-	question:"Bikinis, zucchinis, martinis. No weenies", 
-	answerOptions:[ "Jay-z", "Method-Man", "Kanye West", "Snoop-Dogg"],
-	answer: "Snoop-Dogg",
-	answerIndex: 3,
-	image: "assets/images/snoopdogg.jpg"
+		question:"Bikinis, zucchinis, martinis. No weenies", 
+		answerOptions:[ "Jay-z", "Method-Man", "Kanye West", "Snoop-Dogg"],
+		answer: "Snoop-Dogg",
+		answerIndex: 3,
+		image: "assets/images/snoopdogg.jpg"
 };
 
 var question6 = { 
-	question:"My wrist deserve a shout-out, I'm like 'What up, wrist?'", 
-	answerOptions:[ "2 Chainz", "Kanye West", "Jay-z", "Camron"],
-	answer: "2 Chainz",
-	answerIndex: 0,
-	image: "assets/images/2chainz.jpg"
+		question:"My wrist deserve a shout-out, I'm like 'What up, wrist?'", 
+		answerOptions:[ "2 Chainz", "Kanye West", "Jay-z", "Camron"],
+		answer: "2 Chainz",
+		answerIndex: 0,
+		image: "assets/images/2chainz.jpg"
 };
 
 
@@ -91,7 +91,7 @@ function countDown(){
 
 	//if timer gets below zero, default wrong answer and add one to unanswered
 	if( timer < 0){
-		
+
 		$(".result").text("Sorry, the right answer was " + questionOptions[currentQuestion].answer);
 		unanswered ++;
 
@@ -192,6 +192,7 @@ function reset(){
 
 
 $("#over").hide();
+
 //start game by clicking start
 $(".start").on("click", function(){
 	$(".start").hide();
@@ -200,10 +201,6 @@ $(".start").on("click", function(){
 
 //choosing your answer
 $(".answer").on("click", function(){
-
-	//hide question and show the result
-	// $("#q-and-a").hide();
-	// $("#post-question").show();
 
 	//choice equals the value of the clicked div
 	var choice = $(this).attr("value")
