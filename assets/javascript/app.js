@@ -91,7 +91,7 @@ function countDown(){
 
 	//if timer gets below zero, default wrong answer and add one to unanswered
 	if( timer < 0){
-			
+		
 		$(".result").text("Sorry, the right answer was " + questionOptions[currentQuestion].answer);
 		unanswered ++;
 
@@ -104,12 +104,12 @@ function countDown(){
 //this function will be called when no more questions are left. It displays the results
 function gameOver (){
 	$("#over").show();
-		$("#q-and-a").hide();
-		$("#post-question").hide();
-		$("#correct").text("Correct answers: " + correctAnswers);
-		$("#incorrect").text("Incorrect answers: " + incorrectAnswers);
-		$("#unanswered").text("Unanswered questions: " + unanswered);
-	};
+	$("#q-and-a").hide();
+	$("#post-question").hide();
+	$("#correct").text("Correct answers: " + correctAnswers);
+	$("#incorrect").text("Incorrect answers: " + incorrectAnswers);
+	$("#unanswered").text("Unanswered questions: " + unanswered);
+};
 
 //this function puts the current question and answer options on the screen
 
@@ -145,7 +145,7 @@ function startGame(){
 		$("#over").hide();
 		$("#q-and-a").show();
 		$("#post-question").hide();
-};
+	};
 
 
 };
