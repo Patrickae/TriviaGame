@@ -3,6 +3,8 @@ var correctAnswers = 0;
 var incorrectAnswers = 0;
 var unanswered = 0;
 
+var gameStart = false;
+
 //variable to be used to hold the timer interval
 var clock;
 
@@ -155,6 +157,7 @@ function postImage(){
 
 	newImage=$("<img>");
 	newImage.attr("src", questionOptions[currentQuestion].image);
+	newImage.addClass("img-circle");
 	$(".picture").html(newImage);
 };
 
@@ -197,30 +200,33 @@ $("#over").hide();
 $(".start").on("click", function(){
 	$(".start").hide();
 	startGame();
+	gameStart = true;
+	g
 });
 
 //choosing your answer
 $(".answer").on("click", function(){
 
-	//choice equals the value of the clicked div
-	var choice = $(this).attr("value")
+	if (gameStart === true){
+		//choice equals the value of the clicked div
+		var choice = $(this).attr("value")
 
-	console.log(choice);
+		console.log(choice);
 
-	//determine if choice equals the correct answer index or not
-	if(choice == questionOptions[currentQuestion].answerIndex){
-		$(".result").text("THATS RIGHT!");
-		correctAnswers++;
-	}
-	else{
-		$(".result").text("Sorry, the right answer was " + questionOptions[currentQuestion].answer);
-		incorrectAnswers++;
+		//determine if choice equals the correct answer index or not
+		if(choice == questionOptions[currentQuestion].answerIndex){
+			$(".result").text("THATS RIGHT!");
+			correctAnswers++;
+		}
+		else{
+			$(".result").text("Sorry, the right answer was " + questionOptions[currentQuestion].answer);
+			incorrectAnswers++;
+		};
+
+		//set timer until next question shows, reset clock
+		postQuestion();
+
 	};
-
-	//set timer until next question shows, reset clock
-	postQuestion();
-
-
 });
 
 
